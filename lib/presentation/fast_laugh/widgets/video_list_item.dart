@@ -25,11 +25,12 @@ class VideolistItem extends StatelessWidget {
               //left side
 
               CircleAvatar(
+                backgroundColor: Colors.black.withOpacity(0.5),
                 radius: 25,
                 child: IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.volume_mute,
+                    Icons.volume_off_outlined,
                   ),
                 ),
               ),
@@ -39,7 +40,13 @@ class VideolistItem extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  CircleAvatar(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10,),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundImage: NetworkImage('https://i.pinimg.com/564x/07/aa/75/07aa7580d9ce8dca0db8d2f3d7c35eec.jpg'),
+                    ),
+                  ),
                   VideoActionWidget(icon: Icons.emoji_emotions, title: 'LOL'),
                   VideoActionWidget(icon: Icons.add, title: 'My List'),
                   VideoActionWidget(icon: Icons.share, title: 'Share'),
