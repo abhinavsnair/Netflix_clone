@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
+import 'package:netflix_clone/core/constats.dart';
 
 class VideolistItem extends StatelessWidget {
   final int index;
@@ -38,11 +39,11 @@ class VideolistItem extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  CircleAvatar(),
                   VideoActionWidget(icon: Icons.emoji_emotions, title: 'LOL'),
-                  VideoActionWidget(icon: Icons.add, title: 'Add'),
+                  VideoActionWidget(icon: Icons.add, title: 'My List'),
                   VideoActionWidget(icon: Icons.share, title: 'Share'),
-                  VideoActionWidget(icon: Icons.play_arrow, title: 'My List'),
-                  
+                  VideoActionWidget(icon: Icons.play_arrow, title: 'Play'),
                 ],
               )
             ],
@@ -60,14 +61,24 @@ class VideoActionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(
-          icon,
-          color: kwhite,
-        ),
-        Text(title)
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 10,
+      ),
+      child: Column(
+        children: [
+          Icon(
+            icon,
+            color: kwhite,
+            size: 30,
+          ),
+          Text(
+            title,
+            style: TextStyle(fontSize: 16),
+          )
+        ],
+      ),
     );
   }
 }
