@@ -1,7 +1,4 @@
-
-
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/constats.dart';
@@ -18,19 +15,20 @@ class ScreenDownloads extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: AppBarWidget(
-            title: 'Downloads',
-          ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: AppBarWidget(
+          title: 'Downloads',
         ),
-        body: ListView.separated(
-            padding: const EdgeInsets.all(10),
-            itemBuilder: (context, index) => _widgetList[index],
-            separatorBuilder: ((context, index) => const SizedBox(
-                  height: 25,
-                )),
-            itemCount: 3));
+      ),
+      body: ListView.separated(
+          padding: const EdgeInsets.all(10),
+          itemBuilder: (context, index) => _widgetList[index],
+          separatorBuilder: ((context, index) => const SizedBox(
+                height: 25,
+              )),
+          itemCount: 3),
+    );
   }
 }
 
@@ -109,8 +107,9 @@ class Section3 extends StatelessWidget {
           child: MaterialButton(
             onPressed: () {},
             color: kButtonColorBlue,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
             child: const Text(
               'Set Up',
               style: TextStyle(
@@ -182,10 +181,11 @@ class Downloadsimagewidgets extends StatelessWidget {
         width: size.width,
         height: size.height,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(borderradius),
-            color: kblack,
-            image: DecorationImage(
-                image: NetworkImage(imagelist), fit: BoxFit.cover)),
+          borderRadius: BorderRadius.circular(borderradius),
+          color: kblack,
+          image: DecorationImage(
+              image: NetworkImage(imagelist), fit: BoxFit.cover),
+        ),
       ),
     );
   }

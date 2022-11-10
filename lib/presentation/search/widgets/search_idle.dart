@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/constats.dart';
@@ -51,7 +49,10 @@ class TopSearchItemTile extends StatelessWidget {
           child: Text(
             'Movie Name',
             style: TextStyle(
-                color: kwhite, fontWeight: FontWeight.bold, fontSize: 16),
+              color: kwhite,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
         ),
         const Icon(

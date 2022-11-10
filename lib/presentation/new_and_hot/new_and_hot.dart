@@ -1,8 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
+import 'package:netflix_clone/presentation/widgets/custom_button.dart';
 import '../../core/constats.dart';
+import 'widgets/coming_soon.dart';
 
 class ScreennewAndHot extends StatelessWidget {
   const ScreennewAndHot({super.key});
@@ -56,44 +57,19 @@ class ScreennewAndHot extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-            children: [_buildComingSoon(context), _buildEveryonesWatching()]),
+          children: [
+            _buildComingSoon(),
+            _buildEveryonesWatching(),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildComingSoon(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return ListView(
-      children: [
-        kheight,
-        Row(
-          children: [
-            SizedBox(
-              width: 50,
-              child: Column(
-                children: const [
-                  Text(
-                    'Feb',
-                  ),
-                  Text(
-                    '11',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 500,
-              width: size.width - 50,
-              color: kwhite,
-            ),
-          ],
-        ),
-      ],
+  Widget _buildComingSoon() {
+    return ListView.builder(
+      itemCount: 10,
+      itemBuilder: (BuildContext context, index) => const ComingSoonWidget(),
     );
   }
 

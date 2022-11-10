@@ -1,12 +1,13 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 
-const kwidth = SizedBox(
-  width: 10,
-);
+//sizedbox
+const kwidth = SizedBox(width: 10);
 const kheight = SizedBox(height: 10);
 const kheight20 = SizedBox(height: 20);
+const kwidth20 = SizedBox(width: 20);
+const kheight5 = SizedBox(height: 5);
+const kwidth5 = SizedBox(width: 5);
+
 
 // borderradius
 final kborder10 = BorderRadius.circular(10);
@@ -17,3 +18,7 @@ TextStyle kMainTitileStyle = const TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 15,
 );
+
+//image
+const HotandNewTempImage =
+    'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/8V1XPEDLtJoxOWlE6gYzn2sQaMp.jpg';

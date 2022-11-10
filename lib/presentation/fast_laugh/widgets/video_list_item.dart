@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 
@@ -28,6 +26,7 @@ class VideolistItem extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(
                     Icons.volume_off_outlined,
+                    color: kwhite,
                   ),
                 ),
               ),

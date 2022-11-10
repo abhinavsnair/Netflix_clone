@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/presentation/main_page/screen_main.dart';
 
@@ -15,11 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          appBarTheme: AppBarTheme(color: Colors.transparent),
+          appBarTheme: const AppBarTheme(color: Colors.transparent),
           scaffoldBackgroundColor: Colors.black,
           primarySwatch: Colors.blue,
           backgroundColor: Colors.black,
-          textTheme: TextTheme(
+          textTheme: const TextTheme(
             bodyText1: TextStyle(
               color: Colors.white,
             ),

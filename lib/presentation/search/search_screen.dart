@@ -42,8 +42,10 @@ class ScreeanSearch extends StatelessWidget {
                 ),
               ),
               kheight,
-            // Expanded(child: SearchIdleWidget())
-              const Expanded(child: SearchResultWidget())
+              // Expanded(child: SearchIdleWidget())
+              const Expanded(
+                child: SearchResultWidget(),
+              )
             ],
           ),
         ),
