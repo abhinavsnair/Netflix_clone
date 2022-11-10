@@ -1,11 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/constats.dart';
-import 'package:netflix_clone/presentation/search/widgets/search_idle.dart';
 import 'package:netflix_clone/presentation/search/widgets/search_results.dart';
 
 class ScreeanSearch extends StatelessWidget {
@@ -26,7 +20,7 @@ class ScreeanSearch extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: TextField(
+                child: const TextField(
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -49,7 +43,7 @@ class ScreeanSearch extends StatelessWidget {
               ),
               kheight,
             // Expanded(child: SearchIdleWidget())
-              Expanded(child: SearchResultWidget())
+              const Expanded(child: SearchResultWidget())
             ],
           ),
         ),

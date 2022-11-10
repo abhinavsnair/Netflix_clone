@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../../../core/colors/colors.dart';
 import 'custom_button.dart';
@@ -17,11 +15,11 @@ class BackgroundCard extends StatelessWidget {
         Container(
           height: 600,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
               image: NetworkImage(
-                  'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg'),
+                  'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ydbm5Ad1nyZq7eywWsw82Wxdsgg.jpg'),
             ),
           ),
         ),
@@ -34,12 +32,12 @@ class BackgroundCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CustomButton(
+                const CustomButton(
                   icon: Icons.add,
                   title: 'My List',
                 ),
                 _TextButton(),
-                CustomButton(
+                const CustomButton(
                   icon: Icons.info_outline_rounded,
                   title: 'Info',
                 )
@@ -54,13 +52,13 @@ class BackgroundCard extends StatelessWidget {
   TextButton _TextButton() {
     return TextButton.icon(
       onPressed: () {},
-      icon: Icon(
+      icon: const Icon(
         Icons.play_arrow,
         size: 25,
         color: kblack,
       ),
-      label: Padding(
-        padding: const EdgeInsets.symmetric(
+      label: const Padding(
+        padding: EdgeInsets.symmetric(
           horizontal: 10,
         ),
         child: Text(

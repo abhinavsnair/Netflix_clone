@@ -1,10 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
-import 'package:netflix_clone/core/constats.dart';
 
 class VideolistItem extends StatelessWidget {
   final int index;
@@ -29,7 +26,7 @@ class VideolistItem extends StatelessWidget {
                 radius: 25,
                 child: IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.volume_off_outlined,
                   ),
                 ),
@@ -39,9 +36,9 @@ class VideolistItem extends StatelessWidget {
 
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10,),
+                    padding: EdgeInsets.symmetric(vertical: 10,),
                     child: CircleAvatar(
                       radius: 25,
                       backgroundImage: NetworkImage('https://i.pinimg.com/564x/07/aa/75/07aa7580d9ce8dca0db8d2f3d7c35eec.jpg'),
@@ -82,7 +79,7 @@ class VideoActionWidget extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           )
         ],
       ),

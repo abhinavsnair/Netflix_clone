@@ -1,8 +1,8 @@
+
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/constats.dart';
 import 'package:netflix_clone/presentation/widgets/app_bar_widgets.dart';
@@ -10,9 +10,9 @@ import 'package:netflix_clone/presentation/widgets/app_bar_widgets.dart';
 class ScreenDownloads extends StatelessWidget {
   ScreenDownloads({super.key});
   final _widgetList = [
-    _SmartDownload(),
+    const _SmartDownload(),
     Section2(),
-    Section3(),
+    const Section3(),
   ];
 
   @override
@@ -25,9 +25,9 @@ class ScreenDownloads extends StatelessWidget {
           ),
         ),
         body: ListView.separated(
-          padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             itemBuilder: (context, index) => _widgetList[index],
-            separatorBuilder: ((context, index) => SizedBox(
+            separatorBuilder: ((context, index) => const SizedBox(
                   height: 25,
                 )),
             itemCount: 3));
@@ -74,19 +74,19 @@ class Section2 extends StatelessWidget {
               ),
               Downloadsimagewidgets(
                 imagelist: imagelist[0],
-                margin: EdgeInsets.only(left: 150, bottom: 55,top: 20),
+                margin: const EdgeInsets.only(left: 150, bottom: 55, top: 20),
                 angle: 20,
                 size: Size(size.width * 0.45, size.width * 0.58),
               ),
               Downloadsimagewidgets(
                 imagelist: imagelist[1],
-                margin: EdgeInsets.only(right: 150, bottom: 55,top: 20),
+                margin: const EdgeInsets.only(right: 150, bottom: 55, top: 20),
                 angle: -20,
                 size: Size(size.width * 0.45, size.width * 0.58),
               ),
               Downloadsimagewidgets(
                 imagelist: imagelist[2],
-                margin: EdgeInsets.only(left: 0, bottom: 20,top: 25),
+                margin: const EdgeInsets.only(left: 0, bottom: 20, top: 25),
                 size: Size(size.width * 0.45, size.width * 0.65),
               )
             ],
@@ -123,9 +123,9 @@ class Section3 extends StatelessWidget {
           onPressed: () {},
           color: kwhite,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: const Text(
+          child: const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Text(
               'See what you can dowload',
               style: TextStyle(
                   color: kblack, fontSize: 20, fontWeight: FontWeight.bold),

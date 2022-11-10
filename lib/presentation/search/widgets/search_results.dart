@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/constats.dart';
 import 'package:netflix_clone/presentation/search/widgets/title.dart';
 
@@ -17,7 +15,7 @@ class SearchResultWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SearchTitle(title: 'Movies & TV'),
+        const SearchTitle(title: 'Movies & TV'),
         kheight,
         Expanded(
           child: GridView.count(
@@ -27,7 +25,7 @@ class SearchResultWidget extends StatelessWidget {
             crossAxisSpacing: 8,
             childAspectRatio: 1/1.4,
             children: List.generate(20, (index) {
-              return MainCard();
+              return const MainCard();
             }),
           ),
         ),
@@ -43,7 +41,7 @@ class MainCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
+        image: const DecorationImage(
           image: NetworkImage(imageUrl),
           fit: BoxFit.cover,
         ),

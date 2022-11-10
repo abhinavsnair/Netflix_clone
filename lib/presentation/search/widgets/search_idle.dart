@@ -1,9 +1,6 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/constats.dart';
 import 'package:netflix_clone/presentation/search/widgets/title.dart';
@@ -19,12 +16,12 @@ class SearchIdleWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SearchTitle(title: 'Top Searches'),
+        const SearchTitle(title: 'Top Searches'),
         kheight,
         Expanded(
           child: ListView.separated(
               shrinkWrap: true,
-              itemBuilder: ((context, index) => TopSearchItemTile()),
+              itemBuilder: ((context, index) => const TopSearchItemTile()),
               separatorBuilder: ((context, index) => kheight20),
               itemCount: 10),
         ),
@@ -44,20 +41,20 @@ class TopSearchItemTile extends StatelessWidget {
         Container(
           width: ScreenWidth * 0.35,
           height: 65,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(imageurl),
             ),
           ),
         ),
-        Expanded(
+        const Expanded(
           child: Text(
             'Movie Name',
             style: TextStyle(
                 color: kwhite, fontWeight: FontWeight.bold, fontSize: 16),
           ),
         ),
-        Icon(
+        const Icon(
           CupertinoIcons.play_circle,
           color: kwhite,
           size: 35,
