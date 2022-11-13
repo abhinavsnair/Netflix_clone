@@ -21,5 +21,7 @@ TextStyle kMainTitileStyle = const TextStyle(
 );
 
 //image
+const imageAppendUrl = 'https://image.tmdb.org/t/p/w500';
+
 const HotandNewTempImage =
     'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/8V1XPEDLtJoxOWlE6gYzn2sQaMp.jpg';
