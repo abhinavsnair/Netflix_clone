@@ -40,7 +40,7 @@ class Section2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // WidgetsBinding.instance!.addPostFrameCallback((_) {
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
     //   BlocProvider.of<DownloadsBloc>(context)
     //       .add(const DownloadsEvent.getDownloadsImage());
     // });
@@ -64,12 +64,12 @@ class Section2 extends StatelessWidget {
         kheight,
         BlocBuilder<DownloadsBloc, DownloadsState>(
           builder: (context, state) {
-            return state.isLoading
-                ? const CircularProgressIndicator()
-                : SizedBox(
-                    height: size.width,
-                    width: size.width,
-                    child: Stack(
+            return SizedBox(
+              height: size.width,
+              width: size.width,
+              child: state.isLoading
+                  ? const Center(child:  CircularProgressIndicator())
+                  : Stack(
                       alignment: Alignment.center,
                       children: [
                         Center(
@@ -82,28 +82,46 @@ class Section2 extends StatelessWidget {
                           imagelist:
                               '$imageAppendUrl${state.downloads[0].posterPath}',
                           margin: const EdgeInsets.only(
-                              left: 150, bottom: 55, top: 20),
+                            left: 150,
+                            bottom: 55,
+                            top: 20,
+                          ),
                           angle: 20,
-                          size: Size(size.width * 0.45, size.width * 0.58),
+                          size: Size(
+                            size.width * 0.45,
+                            size.width * 0.58,
+                          ),
                         ),
                         Downloadsimagewidgets(
                           imagelist:
                               '$imageAppendUrl${state.downloads[1].posterPath}',
                           margin: const EdgeInsets.only(
-                              right: 150, bottom: 55, top: 20),
+                            right: 150,
+                            bottom: 55,
+                            top: 20,
+                          ),
                           angle: -20,
-                          size: Size(size.width * 0.45, size.width * 0.58),
+                          size: Size(
+                            size.width * 0.45,
+                            size.width * 0.58,
+                          ),
                         ),
                         Downloadsimagewidgets(
                           imagelist:
                               '$imageAppendUrl${state.downloads[2].posterPath}',
                           margin: const EdgeInsets.only(
-                              left: 0, bottom: 20, top: 25),
-                          size: Size(size.width * 0.45, size.width * 0.65),
-                        )
+                            left: 0,
+                            bottom: 20,
+                            top: 25,
+                          ),
+                          size: Size(
+                            size.width * 0.45,
+                            size.width * 0.65,
+                          ),
+                        ),
                       ],
                     ),
-                  );
+            );
           },
         ),
       ],
